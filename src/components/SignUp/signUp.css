@@ -1,0 +1,23 @@
+.signUp-container {
+    padding: 20px;
+}
+
+.signUp-form {
+    padding: 20px;
+    min-height: 70vh;
+}
+
+.signUp-title {
+    margin: 16px 0;
+}
+
+.login-now {
+    user-select: none;
+    color: #1976d2;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.have-an-account {
+    user-select: none;
+}
