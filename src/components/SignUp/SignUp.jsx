@@ -38,6 +38,7 @@ const SignUp = () => {
                 if (res.data === "Logged in") navigate("/home");
             })
                 .catch(err => {
+                    localStorage.removeItem("user");
                     setLoading(false);
                 });
         }

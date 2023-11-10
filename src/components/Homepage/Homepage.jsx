@@ -22,6 +22,7 @@ const Homepage = () => {
                 if (res.data === "Logged in") setLoading(false);
             })
                 .catch(err => {
+                    localStorage.removeItem("user");
                     navigate("/login");
                 });
         }
