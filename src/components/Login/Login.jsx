@@ -6,6 +6,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { Button, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"
+import UndoOutlinedIcon from '@mui/icons-material/UndoOutlined';
 import axios from "axios";
 
 const Login = () => {
@@ -35,6 +36,7 @@ const Login = () => {
                 if (res.data === "Logged in") navigate("/home");
             })
                 .catch(err => {
+                    localStorage.removeItem("user");
                     setLoading(false);
                 });
         }
@@ -118,6 +120,10 @@ const Login = () => {
                     <Typography style={{ marginTop: "16px" }}>
                         <span className="not-registered">Not registered? </span><span className="create-account" onClick={e => navigate("/sign-up")}>Create an account</span>
                     </Typography>
+                    <Grid container marginTop={4} justifyContent={"center"} alignItems={"center"}>
+                        <Avatar style={{ backgroundColor: "#1bbd7e" }}><UndoOutlinedIcon /></Avatar>
+                        <span className="back-to-landing-page" onClick={e => navigate("/landing")}>Back to landing page</span>
+                    </Grid>
                 </Paper>
             </Grid>
         </Grid>

@@ -22,3 +22,15 @@
 .not-registered {
     user-select: none;
 }
+
+.back-to-landing-page {
+    user-select: none;
+    margin-left: 10px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    color: #1976d2;
+}
+
+.back-to-landing-page:hover {
+    text-decoration: underline;
+}

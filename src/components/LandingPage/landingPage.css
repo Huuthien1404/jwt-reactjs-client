@@ -1,0 +1,202 @@
+.landing-page-container {
+    min-height: 100vh;
+    background-color: #fff3e5;
+    padding: 40px 80px 0px;
+
+}
+
+.brandText {
+    user-select: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.Home,
+.Careers,
+.Blog,
+.AboutUs {
+    padding: 0 20px;
+}
+
+.Home:hover,
+.Careers:hover,
+.Blog:hover,
+.AboutUs:hover {
+    color: #d02d61;
+}
+
+.landing-page-body {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.landing-page-body-left {
+    width: 50%;
+}
+
+.landing-page-body-right {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    overflow: hidden;
+}
+
+.landing-page-body-right img {
+    object-fit: cover;
+    height: 60vh;
+    width: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.paragraph2,
+.paragraph1 {
+    font-size: 3rem;
+    /* 48px */
+    line-height: 1;
+    font-weight: 900;
+    margin-bottom: 30px;
+    user-select: none;
+}
+
+.paragraph2 {
+    color: #f38b06;
+}
+
+.paragraph3 {
+    font-size: 1.25rem;
+    /* 20px */
+    line-height: 1.75rem;
+    /* 28px */
+    margin-bottom: 30px;
+    user-select: none;
+}
+
+.getting-started {
+    padding: 20px 30px;
+    background-color: #f38b06;
+    color: white;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.getting-started-watch-how {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    user-select: none;
+}
+
+.watch-how {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    justify-content: center;
+}
+
+.watch-icon-triangle {
+    width: 0px;
+    height: 0px;
+    border-left: 15px solid #3498db;
+    /* Độ rộng của tam giác */
+    border-top: 10px solid transparent;
+    /* Độ rộng của tam giác */
+    border-bottom: 10px solid transparent;
+    /* Độ cao của tam giác và màu sắc */
+}
+
+.watch-icon {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+
+.watch-how span {
+    margin-left: 20px;
+    user-select: none;
+    font-size: 1.125rem;
+    /* 18px */
+    line-height: 1.75rem;
+    /* 28px */
+}
+
+.getting-started {
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+
+.watch-icon:hover,
+.getting-started:hover {
+    box-shadow: 0 5px 10px 0px rgba(0,0,0,0.4);
+}
+
+.getting-started:active {
+    background-color: grey;
+}
+
+.watch-icon:active {
+    background-color: grey;
+}
+
+@media screen and (max-width: 1023.98px) {
+
+    .Home,
+    .Careers,
+    .Blog,
+    .AboutUs {
+        padding: 0 13px;
+    }
+
+    .landing-page-container {
+        padding: 20px 40px 0px;
+    }
+
+    .landing-page-body-right,
+    .landing-page-body-left {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+
+    .Home,
+    .Careers,
+    .Blog,
+    .AboutUs {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 639.98px) {
+
+    .landing-page-container {
+        padding: 10px 10px 0px;
+    }
+
+    .brandText {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .getting-started-watch-how {
+        justify-content: center;
+    }
+
+    .landing-page-body-right img {
+        height: auto;
+    }
+}

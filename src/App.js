@@ -8,14 +8,16 @@ import {
 } from "react-router-dom";
 import SignUp from "./components/SignUp/SignUp";
 import Homepage from "./components/Homepage/Homepage";
+import LandingPage from "./components/LandingPage/LandingPage";
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/*" element={<Navigate to="/login" />} />
+        <Route path="/*" element={<Navigate to="/landing" />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/home" element={<Homepage />} />
+        <Route path="/landing" element={<LandingPage />} />
       </Routes>
     </Router>
   );
