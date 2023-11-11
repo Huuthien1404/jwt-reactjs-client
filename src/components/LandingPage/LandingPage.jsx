@@ -47,7 +47,7 @@ const LandingPage = () => {
     const handleClickSignUpPage = () => {
         navigate("/sign-up");
     }
-    if (loading) <></>
+    if (loading) return <></>
     return (
         <Grid className="landing-page-container" container flexDirection={"column"} justifyContent={"space-between"}>
             <Grid container flexDirection={"row"} alignItems={"center"} justifyContent={"space-between"} rowGap={2} marginBottom={2}>
