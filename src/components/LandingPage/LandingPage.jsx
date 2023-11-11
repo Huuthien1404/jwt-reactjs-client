@@ -53,7 +53,7 @@ const LandingPage = () => {
             <Grid container flexDirection={"row"} alignItems={"center"} justifyContent={"space-between"} rowGap={2} marginBottom={2}>
                 <Grid item>
                     <Grid container flexDirection={"row"} alignItems={"center"}>
-                        <Avatar alt="Ashir Creatives" src="https://jwt-nodejs-server-test.onrender.com/logo.png" />
+                        <Avatar alt="Ashir Creatives" src="https://jwt-nodejs-server-test.onrender.com/logo.PNG" />
                         <span className="brandText" style={{ fontWeight: "600" }}>Ashir Creatives</span>
                         <div className="menu-icon">
                             <Button
