@@ -114,10 +114,10 @@ const SignUp = () => {
                             setUsernameErrorMsg("Required");
                         }
                         else {
-                            const usernameRegex = /^[a-zA-Z0-9_]{6,}$/;
+                            const usernameRegex = /^[a-zA-Z0-9_]{5,}$/;
                             if (usernameRegex.test(e.target.value) === false) {
                                 setUsernameErrorState(true);
-                                setUsernameErrorMsg("The username must have a minimum length of 6 characters, including: letters, numbers, and _");
+                                setUsernameErrorMsg("The password must have a minimum length of 5 and only contain letters, numbers, or _");
                             }
                             else {
                                 setUsernameErrorState(false);
@@ -164,7 +164,7 @@ const SignUp = () => {
                             const passwordRegex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,32}$/;
                             if (passwordRegex.test(e.target.value) === false) {
                                 setPasswordErrorState(true);
-                                setPasswordErrorMsg("The password must: at least one digit [0-9], at least one lowercase character [a-z], at least one uppercase character [A-Z], at least one special character [!@#$%^&*], at least 8 characters in length, but no more than 32.");
+                                setPasswordErrorMsg("The password must be 8-32 characters long and include at least one digit, one lowercase letter, one uppercase letter, and one special character from !@#$%^&*");
                             }
                             else {
                                 setPasswordErrorState(false);
