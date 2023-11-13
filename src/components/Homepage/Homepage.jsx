@@ -103,7 +103,10 @@ const Homepage = () => {
             const res = await axios({
                 url: "https://jwt-nodejs-server-test.onrender.com/v1/auth/logout",
                 method: "POST",
-                withCredentials: true
+                withCredentials: true,
+                headers: {
+                    token: `Bearer ${JSON.parse(localStorage.getItem("user"))['accessToken']}`
+                }
             });
             return res;
         }
