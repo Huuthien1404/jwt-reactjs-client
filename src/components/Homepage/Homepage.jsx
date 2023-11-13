@@ -97,6 +97,22 @@ const Homepage = () => {
     const handleClose = () => {
         setAnchorEl(null);
     };
+    const handleClickLogout = () => {
+        setAnchorEl(null);
+        async function Logout() {
+            const res = await axios({
+                url: "https://jwt-nodejs-server-test.onrender.com/v1/auth/logout",
+                method: "POST",
+                withCredentials: true
+            });
+            return res;
+        }
+        Logout().then(res => {
+            localStorage.removeItem("user");
+            navigate("/login");
+        })
+        .catch(err => console.log(err));
+    }
     if (loading) return <></>
     return (
         <div className="homepage-container">
@@ -166,7 +182,7 @@ const Homepage = () => {
                                 </ListItemIcon>
                                 Account Settings
                             </MenuItem>
-                            <MenuItem onClick={handleClose}>
+                            <MenuItem onClick={handleClickLogout}>
                                 <ListItemIcon>
                                     <Logout fontSize="small" />
                                 </ListItemIcon>
