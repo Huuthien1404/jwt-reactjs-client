@@ -112,7 +112,7 @@ const Homepage = () => {
         }
         Logout().then(res => {
             localStorage.removeItem("user");
-            navigate("/login");
+            navigate("/landing");
         })
         .catch(err => console.log(err));
     }
