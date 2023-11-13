@@ -1,10 +1,12 @@
 import { Avatar, Grid, Paper, TextField, RadioGroup, FormControlLabel, Radio, FormLabel, Button, Typography } from "@mui/material";
 import AppRegistrationOutlinedIcon from '@mui/icons-material/AppRegistrationOutlined';
 import "./signUp.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import socketIOClient from "socket.io-client";
 const SignUp = () => {
+    const socketRef = useRef();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
@@ -83,12 +85,19 @@ const SignUp = () => {
                 return res;
             }
             register().then(res => {
+                socketRef.current.emit('sendDataClient');
                 alert(res.data);
                 navigate("/login");
             })
                 .catch(err => alert(err.response.data));
         }
     }
+    useEffect(()=> {
+        socketRef.current = socketIOClient.connect("https://jwt-nodejs-server-test.onrender.com");
+        return () => {
+            socketRef.current.disconnect();
+        }
+    },[])
     if (loading) return <></>
     return (
         <Grid container justifyContent={"center"}>

@@ -1,0 +1,9 @@
+.homepage-container {
+    padding: 40px;
+}
+
+@media screen  and (max-width: 639.98px){
+    .homepage-container {
+        padding: 10px;
+    } 
+}

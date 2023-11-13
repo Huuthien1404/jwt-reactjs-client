@@ -7,9 +7,11 @@ import { Button, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"
 import UndoOutlinedIcon from '@mui/icons-material/UndoOutlined';
+//import socketIOClient from "socket.io-client";
 import axios from "axios";
 
 const Login = () => {
+    //const socketRef = useRef();
     const navigate = useNavigate();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -44,6 +46,13 @@ const Login = () => {
             setLoading(false);
         }
     }, [navigate]);
+    // useEffect(() => {
+    //     socketRef.current = socketIOClient.connect("http://localhost:8000");
+    //     socketRef.current.emit('sendDataClient');
+    //     return () => {
+    //         socketRef.current.disconnect();
+    //     }
+    // }, []);
     const loginLockStyles = {
         backgroundColor: "#1bbd7e"
     }
